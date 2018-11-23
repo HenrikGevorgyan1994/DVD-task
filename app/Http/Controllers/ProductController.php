@@ -314,8 +314,8 @@ try {
        
         // add Product
         $test = Product::find($id);
-        $test->category_id = $data['category_id']?? 1;
-        $test->subcategory_id = $data['subcategory_id']?? 1;
+        $test->category_id = $data['category_id']?? null;
+        $test->subcategory_id = $data['subcategory_id']?? null;
         $test->case_count = $data['case_count'];
         $test->name = $data['name'];
         $test->description = $data['description'];

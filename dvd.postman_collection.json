@@ -1,0 +1,324 @@
+{
+	"id": "eadd31d5-9451-f25e-921c-4912dca460a0",
+	"name": "dvd",
+	"description": "",
+	"order": [
+		"5dfa45de-84ce-5be8-4be1-a1cd6c26563f",
+		"78296156-07d6-62e1-9253-e954c0d34e53",
+		"024a60ca-5e41-7831-2912-5e6c840c6965",
+		"0b503909-a08d-16bb-580d-c99f3a0f825d",
+		"80e2a063-3da3-9061-3120-3e16309ef608"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1542833689130,
+	"owner": "3087794",
+	"public": false,
+	"requests": [
+		{
+			"id": "024a60ca-5e41-7831-2912-5e6c840c6965",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/getProduct",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "eadd31d5-9451-f25e-921c-4912dca460a0",
+			"data": [
+				{
+					"key": "name",
+					"value": "koshikner",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/getProduct",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1542978880758,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "0b503909-a08d-16bb-580d-c99f3a0f825d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/createSubCategory/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "category_id",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542978973773,
+			"name": "http://localhost:8000/api/createCategory",
+			"description": "",
+			"collectionId": "eadd31d5-9451-f25e-921c-4912dca460a0",
+			"responses": []
+		},
+		{
+			"id": "5dfa45de-84ce-5be8-4be1-a1cd6c26563f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/uploadProduct",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "category_id",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "subcategory_id",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "case_count",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "brand",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "files",
+					"value": "y2mate.com - zhu_good_life_audio_0CWVgu2Odjg_1080p.mp4",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "upc",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542978702908,
+			"name": "http://localhost:8000/api/uploadProduct",
+			"description": "",
+			"collectionId": "eadd31d5-9451-f25e-921c-4912dca460a0",
+			"responses": []
+		},
+		{
+			"id": "78296156-07d6-62e1-9253-e954c0d34e53",
+			"headers": "//Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8000/api/editProduct/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eadd31d5-9451-f25e-921c-4912dca460a0",
+			"data": [
+				{
+					"key": "category_id",
+					"value": "Man",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "subcategory_id",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "case_count",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "brand",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "files",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "upc",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/editProduct/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1542978853328,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "80e2a063-3da3-9061-3120-3e16309ef608",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/createSubCategory/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "eadd31d5-9451-f25e-921c-4912dca460a0",
+			"data": [
+				{
+					"key": "category_id",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8000/api/createSubCategory/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1542979000347,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
