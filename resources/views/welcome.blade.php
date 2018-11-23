@@ -8,7 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -57,16 +58,19 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .size {
+                width: 100%;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
             }
         </style>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
-        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,41 +85,82 @@
                 </div>
             @endif
 
-            <div class="content">
-            <form action="{{ url('/api/uploadCSV')}}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                <input type="file" name="csv-file" class="form-control" placeholder="csv">
-                <button type="submit">Save</button>
-            </form>
+            <div class="container">
+                <div class="col-sm-12">
+                <form action="{{ url('/api/uploadCSV')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <label for="csv"> Upload CSV file</label>
+                                <input type="file" name="csv-file" class="form-control" placeholder="csv"><br>
+                                <button class="btn btn-success" type="submit">Save</button>
+                            </div>
+                        </div>
+                      
+                </form>
+                </div>
+            </div>
+          
 
-
-<br>
+            <div class="container">
             <form action="{{ url('/api/uploadProduct')}}" method="POST" enctype="multipart/form-data">
                 @csrf
-              <label for="case_count" ></label>
-            <input type="text" name="case_count" placeholder="case_count">
-            <label for="name" ></label>
-            <input type="text" name="name" placeholder="name,">
-            <label for="description" ></label>
-            <input type="text" name="description" placeholder="description,">
-            <label for="brand" ></label>
-            <input type="text" name="brand" placeholder="brand">
-            <label for="size" ></label>
-            <input type="text" name="size" placeholder="size">
-            <button type="button" onclick="fileFunction()">+</button>
-            <div class="myimg">
-                <label for="file"></label>
-                <input type="file" name="files[]" class="form-control" placeholder="files">
+                <div class="form-group ">
+                    <div class="col-sm-4">
+                        <label for="case_count"></label>
+                        <input type="text" class="form-control" name="case_count" placeholder="case_count">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-sm-4">
+                        <label for="name" ></label>
+                        <input type="text" class="form-control" name="name" placeholder="name">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-sm-4">
+                        <label for="description"></label>
+                        <input type="text" class="form-control" name="description" placeholder="description">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-sm-4">
+                        <label for="brand"></label>
+                        <input type="text" class="form-control" name="brand" placeholder="brand">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="col-sm-4">
+                        <label for="size" ></label>
+                        <input type="text" class="form-control" name="size" placeholder="size">
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm size" onclick="fileFunction()">+</button>
+                </div>
+            <div class="form-group">   
+                <div class="col-sm-3">
+                    <div class="myimg">
+                        <label for="file"></label>
+                        <input type="file" name="files[]" class="form-control" placeholder="files">
+                       
+                    </div>
+ 
+                </div>
+                
             </div>
-            <button type="submit">Save</button>
+            
+            <div class="form-group">
+                <div class="col-sm-4"><br>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+            </div>
             </form>
 
-
-
-
-              
             </div>
-        </div>
+       
+    
         <script>
         function fileFunction() {
         $('.myimg').append(" <div> <label for=\"file\"></label>" +
